@@ -1,2 +1,25 @@
-# dmesh
-Data Mesh Concept Study
+# DMesh
+By Anthony Vilarim Caliani
+
+![#](https://img.shields.io/badge/licence-MIT-lightseagreen.svg)
+
+`TODO` Add a description about the idea and about the project.<br>
+
+![diagram](.docs/diagram.png)
+
+## Quick Start
+
+```bash
+# TODO...
+```
+
+## Screenshots
+...
+
+## Development Details
+ - [RESTful API](./dmesh-api/README.md)
+ - [Spark Jobs](./dmesh-jobs/README.md)
+
+
+## Related Links
+- [??????](#????)
