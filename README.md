@@ -5,7 +5,7 @@ By Anthony Vilarim Caliani
 
 `TODO` Add a description about the idea and about the project.<br>
 
-![diagram](.docs/diagram.png)
+![diagram](.docs/diagram.jpg)
 
 ## Quick Start
 
