@@ -1,4 +1,4 @@
-package br.avcaliani.dmesh.user
+package br.avcaliani.dmesh.component.user
 
 import br.avcaliani.dmesh.security.user.UserDetailsImpl
 import org.springframework.beans.factory.annotation.Autowired

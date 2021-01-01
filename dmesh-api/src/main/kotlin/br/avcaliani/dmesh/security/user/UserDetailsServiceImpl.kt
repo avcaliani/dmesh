@@ -1,6 +1,6 @@
 package br.avcaliani.dmesh.security.user
 
-import br.avcaliani.dmesh.user.UserService
+import br.avcaliani.dmesh.component.user.UserService
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.security.core.userdetails.UserDetails
 import org.springframework.security.core.userdetails.UserDetailsService

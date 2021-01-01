@@ -1,4 +1,4 @@
-package br.avcaliani.dmesh.order.model
+package br.avcaliani.dmesh.component.order.model
 
 data class Product(
     val id: String = "",

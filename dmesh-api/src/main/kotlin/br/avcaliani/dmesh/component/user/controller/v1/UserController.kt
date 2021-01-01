@@ -1,6 +1,6 @@
-package br.avcaliani.dmesh.user.controller.v1
+package br.avcaliani.dmesh.component.user.controller.v1
 
-import br.avcaliani.dmesh.user.UserService
+import br.avcaliani.dmesh.component.user.UserService
 import br.avcaliani.dmesh.util.V1
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.ResponseEntity

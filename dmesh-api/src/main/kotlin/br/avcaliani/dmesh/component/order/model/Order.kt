@@ -1,4 +1,4 @@
-package br.avcaliani.dmesh.order.model
+package br.avcaliani.dmesh.component.order.model
 
 import java.util.*
 

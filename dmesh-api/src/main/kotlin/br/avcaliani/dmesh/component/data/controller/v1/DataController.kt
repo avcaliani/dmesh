@@ -1,6 +1,6 @@
-package br.avcaliani.dmesh.data.controller.v1
+package br.avcaliani.dmesh.component.data.controller.v1
 
-import br.avcaliani.dmesh.data.DataService
+import br.avcaliani.dmesh.component.data.DataService
 import br.avcaliani.dmesh.util.V1
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.core.io.InputStreamResource

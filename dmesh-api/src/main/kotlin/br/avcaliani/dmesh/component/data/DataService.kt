@@ -1,4 +1,4 @@
-package br.avcaliani.dmesh.data
+package br.avcaliani.dmesh.component.data
 
 import org.slf4j.LoggerFactory
 import org.springframework.beans.factory.annotation.Value

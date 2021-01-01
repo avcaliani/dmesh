@@ -1,4 +1,4 @@
-package br.avcaliani.dmesh.user
+package br.avcaliani.dmesh.component.user
 
 import org.springframework.data.jpa.repository.JpaRepository
 

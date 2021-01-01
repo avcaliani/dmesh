@@ -1,7 +1,7 @@
-package br.avcaliani.dmesh.order.controller.v1
+package br.avcaliani.dmesh.component.order.controller.v1
 
-import br.avcaliani.dmesh.order.OrderService
-import br.avcaliani.dmesh.order.model.Order
+import br.avcaliani.dmesh.component.order.OrderService
+import br.avcaliani.dmesh.component.order.model.Order
 import br.avcaliani.dmesh.util.V1
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.http.HttpStatus.CREATED

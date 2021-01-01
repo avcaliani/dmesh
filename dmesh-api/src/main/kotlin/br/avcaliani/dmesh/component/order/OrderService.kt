@@ -1,6 +1,6 @@
-package br.avcaliani.dmesh.order
+package br.avcaliani.dmesh.component.order
 
-import br.avcaliani.dmesh.order.model.Order
+import br.avcaliani.dmesh.component.order.model.Order
 import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 

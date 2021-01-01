@@ -1,6 +1,6 @@
 package br.avcaliani.dmesh.security.user
 
-import br.avcaliani.dmesh.user.User
+import br.avcaliani.dmesh.component.user.User
 import org.springframework.security.core.GrantedAuthority
 import org.springframework.security.core.userdetails.UserDetails
 
