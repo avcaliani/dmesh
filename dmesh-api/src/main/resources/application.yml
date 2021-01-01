@@ -19,7 +19,7 @@ spring:
     show-sql: false
 
 # DATALAKE --------------------------------
-datalake: ${DATALAKE_PATH:./DATALAKE}
+datalake: ${DATALAKE_PATH:../DATALAKE}
 
 # LOGGING ---------------------------------
 logging:

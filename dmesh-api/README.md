@@ -1,10 +1,56 @@
-https://medium.com/@jonssantana/authentication-e-authorization-usando-springboot-kotlin-382681024d08
+# 🎲 DMesh API
+By Anthony Vilarim Caliani
 
+![#](https://img.shields.io/badge/licence-MIT-lightseagreen.svg) ![#](https://img.shields.io/badge/spring--boot-2.4.x-darkseagreen.svg)
 
-curl -H 'Content-Type: application/json' -d '{ "username": "admin", "password": "admin" }' -X POST -v "http://localhost:8080/api/v1/auth"
-curl -H 'Content-Type: application/json' -d '{ "username": "de-customer", "password": "123456" }' -X POST -v "http://localhost:8080/api/v1/auth"
-curl -H 'Content-Type: application/json' -d '{ "username": "da-customer", "password": "123456" }' -X POST -v "http://localhost:8080/api/v1/auth"
+## API Usage
+Execute the following commands on your terminal.
+```bash
+API_URL="http://localhost:8080"
+```
 
-TOKEN="..."
-curl -H 'Content-Type: application/json' -H "Authorization: $TOKEN" -v "http://localhost:8080/api/v1/me"
-curl -H 'Content-Type: application/json' -H "Authorization: $TOKEN" -v "http://localhost:8080/api/v1/data/files/CONSOLIDATED/20201230" --output order-consolidated-20201230.csv
+### Authentication
+```bash
+# api_auth USERNAME PASSWORD
+api_auth() {
+  HEADER_AUTH=$(
+    curl -s -D - -o /dev/null \
+      -H "Content-Type: application/json" \
+      -d "{ \"username\": \"$1\", \"password\": \"$2\" }" \
+      -X POST "$API_URL/api/v1/auth" | grep "Bearer"
+  ) 
+  echo "Token -> $HEADER_AUTH"
+}
+
+# Valid Users
+api_auth "admin"       "admin"
+api_auth "de-customer" "123456"
+api_auth "da-customer" "123456"
+```
+
+### Who am I?
+```bash
+curl -H $HEADER_AUTH "$API_URL/api/v1/me" | json_pp
+```
+
+### Order APIs
+```bash
+# TODO...
+```
+
+### Data APIs
+```bash
+# api_download FILE_TYPE DATE (yyyyMMdd)
+api_download() {
+  mkdir .temp
+  curl -H $HEADER_AUTH "$API_URL/api/v1/data/files/$1/$2" --output ".temp/order-$1-$2.csv"
+  ls -lh .temp
+}
+
+# Downloading Files
+api_download "consolidated" "20201230"
+api_download "records"      "20201230"
+```
+
+## Links
+ - [Medium: Auth + Spring Boot](https://medium.com/@jonssantana/authentication-e-authorization-usando-springboot-kotlin-382681024d08)
