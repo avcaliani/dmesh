@@ -33,9 +33,30 @@ api_auth "da-customer" "123456"
 curl -H $HEADER_AUTH "$API_URL/api/v1/me" | json_pp
 ```
 
-### Order APIs
+### Order API
 ```bash
-# TODO...
+curl \
+  -H $HEADER_AUTH \
+  -H "Content-Type: application/json" \
+  -d '{
+    "customerId": "17850",
+    "country": "United Kingdom",
+    "products": [
+      {
+        "id": "85123A",
+        "description": "WHITE HANGING HEART T-LIGHT HOLDER",
+        "quantity": 6,
+        "unitPrice": 2.55
+      },
+      {
+        "id": "71053",
+        "description": "WHITE METAL LANTERN",
+        "quantity": 6,
+        "unitPrice": 3.39
+      }
+    ]
+  }' \
+  -X POST "$API_URL/api/v1/order" | json_pp
 ```
 
 ### Data APIs

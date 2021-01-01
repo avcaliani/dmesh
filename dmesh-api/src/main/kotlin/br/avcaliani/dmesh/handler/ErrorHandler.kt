@@ -26,4 +26,9 @@ class ErrorHandler : ResponseEntityExceptionHandler() {
         return ResponseEntity(listOf(ex.message), HttpStatus.NOT_FOUND);
     }
 
+    @ExceptionHandler(IllegalArgumentException::class)
+    fun illegalArgs(ex: Exception): ResponseEntity<*> {
+        return ResponseEntity(listOf(ex.message), HttpStatus.NOT_ACCEPTABLE);
+    }
+
 }
