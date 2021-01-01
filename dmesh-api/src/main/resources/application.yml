@@ -6,7 +6,7 @@ jwt:
   secret: my_api_secret
   expiration.secs: 3600
 
-# DATABASE --------------------------------
+# SPRING ----------------------------------
 spring:
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/dmesh
@@ -17,6 +17,17 @@ spring:
     hibernate.ddl-auto: validate
     database-platform: org.hibernate.dialect.MySQL8Dialect
     show-sql: false
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+# RABBIT MQ -------------------------------
+rabbit:
+  exchange: dmesh-exchange
+  queue: dmesh-order
+  routingKey: dmesh-key
 
 # DATALAKE --------------------------------
 datalake: ${DATALAKE_PATH:../DATALAKE}
