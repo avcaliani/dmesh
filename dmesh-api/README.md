@@ -7,3 +7,4 @@ curl -H 'Content-Type: application/json' -d '{ "username": "da-customer", "passw
 
 TOKEN="..."
 curl -H 'Content-Type: application/json' -H "Authorization: $TOKEN" -v "http://localhost:8080/api/v1/me"
+curl -H 'Content-Type: application/json' -H "Authorization: $TOKEN" -v "http://localhost:8080/api/v1/data/files/CONSOLIDATED/20201230" --output order-consolidated-20201230.csv

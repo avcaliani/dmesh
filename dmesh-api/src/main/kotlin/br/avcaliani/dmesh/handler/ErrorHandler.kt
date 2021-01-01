@@ -7,6 +7,7 @@ import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.ControllerAdvice
 import org.springframework.web.bind.annotation.ExceptionHandler
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler
+import java.io.FileNotFoundException
 
 @ControllerAdvice
 class ErrorHandler : ResponseEntityExceptionHandler() {
@@ -17,6 +18,12 @@ class ErrorHandler : ResponseEntityExceptionHandler() {
     fun generic(ex: Exception): ResponseEntity<*> {
         log.error("Unhandled Error: ${ex.message}", ex)
         return ResponseEntity(listOf(ex.message), HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    @ExceptionHandler(FileNotFoundException::class)
+    fun fileNotFound(ex: Exception): ResponseEntity<*> {
+        log.error("File not found! File: ${ex.message}", ex)
+        return ResponseEntity(listOf(ex.message), HttpStatus.NOT_FOUND);
     }
 
 }

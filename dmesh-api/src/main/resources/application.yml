@@ -18,6 +18,9 @@ spring:
     database-platform: org.hibernate.dialect.MySQL8Dialect
     show-sql: false
 
+# DATALAKE --------------------------------
+datalake: ${DATALAKE_PATH:./DATALAKE}
+
 # LOGGING ---------------------------------
 logging:
   level.root: INFO

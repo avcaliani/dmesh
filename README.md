@@ -17,6 +17,9 @@ By Anthony Vilarim Caliani
 ...
 
 https://bcrypt-generator.com/
+https://hub.docker.com/_/mysql
+
+https://www.kaggle.com/carrie1/ecommerce-data
 
 ## Development Details
  - [RESTful API](./dmesh-api/README.md)
