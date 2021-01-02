@@ -35,7 +35,7 @@ curl -H $HEADER_AUTH "$API_URL/api/v1/me" | json_pp
 
 ### Order API
 ```bash
-curl \
+curl -s -D - \
   -H $HEADER_AUTH \
   -H "Content-Type: application/json" \
   -d '{
@@ -56,8 +56,11 @@ curl \
       }
     ]
   }' \
-  -X POST "$API_URL/api/v1/order" | json_pp
+  -X POST "$API_URL/api/v1/order"
 ```
+
+After that, you can check the published messages at [RabbitMQ Management UI](http://localhost:15672/#/queues/%2F/dmesh-order)
+![img](../.docs/rabbitmq-management.jpg)
 
 ### Data APIs
 ```bash
@@ -75,3 +78,8 @@ api_download "records"      "20201230"
 
 ## Links
  - [Medium: Auth + Spring Boot](https://medium.com/@jonssantana/authentication-e-authorization-usando-springboot-kotlin-382681024d08)
+ - [Spring Boot + RabbitMQ](https://spring.io/guides/gs/messaging-rabbitmq/)
+
+<br />
+
+[🏠 Home](../README.md)

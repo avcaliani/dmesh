@@ -8,7 +8,6 @@ By Anthony Vilarim Caliani
 ![diagram](.docs/diagram.jpg)
 
 ## Quick Start
-
 ```bash
 # TODO...
 ```
@@ -16,15 +15,17 @@ By Anthony Vilarim Caliani
 ## Screenshots
 ...
 
-https://bcrypt-generator.com/
-https://hub.docker.com/_/mysql
-
-https://www.kaggle.com/carrie1/ecommerce-data
+## Mocked Data
+```bash
+# TODO...
+```
 
 ## Development Details
- - [RESTful API](./dmesh-api/README.md)
+ - [DMesh API](./dmesh-api/README.md)
  - [Spark Jobs](./dmesh-jobs/README.md)
 
-
 ## Related Links
-- [??????](#????)
+- [Docker Hub: RabbitMQ](https://hub.docker.com/_/rabbitmq)
+- [Docker Hub: MySQL](https://hub.docker.com/_/mysql)
+- [Kaggle: e-Commerce Data](https://www.kaggle.com/carrie1/ecommerce-data)
+- [Medium: RabbitMQ + Docker](https://medium.com/xp-inc/rabbitmq-com-docker-conhecendo-o-admin-cc81f3f6ac3b)
