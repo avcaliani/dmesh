@@ -9,18 +9,11 @@ By Anthony Vilarim Caliani
 
 ## Quick Start
 ```bash
-# TODO...
+docker-compose up -d
+# TODO... Mock Stuff
 ```
 
-## Screenshots
-...
-
-## Mocked Data
-```bash
-# TODO...
-```
-
-## Development Details
+### Development Details
  - [DMesh API](./dmesh-api/README.md)
  - [Spark Jobs](./dmesh-jobs/README.md)
 
