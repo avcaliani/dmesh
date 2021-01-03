@@ -30,3 +30,18 @@ services:
     ports:
       - 5672:5672
       - 15672:15672
+
+  dmesh-api:
+    build:
+      context: ./dmesh-api/
+    image: dmesh-api
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      API_PORT: 8081
+      MY_SQL_IP: db
+      RABBIT_MQ_IP: rabbitmq
+      DATALAKE_PATH: /DATALAKE
+    volumes:
+      - ./DATALAKE:/DATALAKE

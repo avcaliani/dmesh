@@ -6,7 +6,8 @@ By Anthony Vilarim Caliani
 ## API Usage
 Execute the following commands on your terminal.
 ```bash
-API_URL="http://localhost:8080"
+API_URL="http://localhost:8080" # Development
+API_URL="http://localhost:8081" # Docker Port
 ```
 
 ### Authentication
