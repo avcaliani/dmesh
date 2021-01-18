@@ -1,4 +1,12 @@
+# OS
 *.DS_Store
-.temp
-DATALAKE
 
+# Dev Stuff
+.vscode
+.idea
+.temp
+.venv
+
+# Data Stuff
+DATALAKE
+mock/**/*.csv
