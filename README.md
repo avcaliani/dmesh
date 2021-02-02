@@ -19,14 +19,26 @@ docker-compose up -d
 docker-compose down
 ```
 
-### Mock
+### Jobs
+```bash
+# 01 - Start the RabbitMQ consumer job
+docker-compose exec dmesh-jobs /jobs/run.sh --consumer
+
+# 02 - Start the streaming job
+docker-compose exec dmesh-jobs /jobs/run.sh --streaming
+
+# 03 - To generate daily reports, run batch job
+docker-compose exec dmesh-jobs /jobs/run.sh --batch
+```
+
+### Mock (Optional)
 ```bash
 # Starting mock script
-python3 --version # Python 3.7.9
+python3.9 --version # Python 3.9.0
 
 # Get dataset from Kaggle and add "data.csv" into "./mock/api/" directory
 cd mock/api && 
-    python3 -m venv .venv &&
+    python3.9 -m venv .venv &&
     source .venv/bin/activate &&
     pip install -r requirements.txt
 

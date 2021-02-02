@@ -45,3 +45,16 @@ services:
       DATALAKE_PATH: /DATALAKE
     volumes:
       - ./DATALAKE:/DATALAKE
+
+  dmesh-jobs:
+    build:
+      context: ./dmesh-jobs/
+    image: dmesh-jobs
+    restart: always
+    environment:
+      MY_SQL_IP: db
+      RABBIT_MQ_IP: rabbitmq
+      DATALAKE_PATH: /DATALAKE
+    volumes:
+      - ./dmesh-jobs:/jobs
+      - ./DATALAKE:/DATALAKE
