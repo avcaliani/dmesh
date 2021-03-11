@@ -20,17 +20,24 @@ do
 
         --consumer)
         shift
-        ./dmesh-consumer.py "$@" && exit 0
+        cd dmesh-streaming && ./consumer.py "$@" && exit 0
         ;;
 
         --streaming)
         shift
-        spark-submit --master 'local' --name 'dmesh-streaming' 'dmesh-streaming.py' "$@" && exit 0
+        cd dmesh-streaming
+        spark-submit --master 'local' --name 'dmesh-streaming' 'main.py' "$@" && exit 0
         ;;
 
         --batch)
         shift
-        spark-submit --master 'local' --name 'dmesh-batch' 'dmesh-batch.py' "$@" && exit 0
+        cd dmesh-batch
+        spark-submit --master 'local' --name 'dmesh-batch' 'main.py' "$@" && exit 0
+        ;;
+
+        --mock-api)
+        shift
+        cd mock-api && ./main.py "$@" && exit 0
         ;;
 
         *)

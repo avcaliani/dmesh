@@ -14,7 +14,7 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./mock/sql/dmesh-init.sql:/docker-entrypoint-initdb.d/dmesh-init.sql
+      - ./mock/dmesh-init.sql:/docker-entrypoint-initdb.d/dmesh-init.sql
 
   db-adminer:
     image: adminer:4

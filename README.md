@@ -33,20 +33,11 @@ docker-compose exec dmesh-jobs /jobs/run.sh --batch
 
 ### Mock (Optional)
 ```bash
-# Starting mock script
-python3.9 --version # Python 3.9.0
-
+# Before starting...
 # Get dataset from Kaggle and add "data.csv" into "./mock/api/" directory
-cd mock/api && 
-    python3.9 -m venv .venv &&
-    source .venv/bin/activate &&
-    pip install -r requirements.txt
-
-# "-h" flag for further information
-./api-request.py data.csv
-
-# When you finish
-deactivate
+# ------------------------------------------------------------------------
+# Now, you are ready to go!
+docker-compose exec dmesh-jobs /jobs/run.sh --mock-api data.csv
 ```
 
 ### Development Details
